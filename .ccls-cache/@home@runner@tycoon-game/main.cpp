@@ -534,8 +534,8 @@ inventory crafting(inventory b){
   return b;
 }
 
-void calendar(int date){
-  cout << "date is " << date <<"\n\n";
+void calendar(inventory b){
+  cout << "date is " << b.date <<"\n\n";
   string garbage;
   cin >> garbage;
 }
@@ -636,7 +636,7 @@ bool mainMenu(bool won){
   
       if(choice == "1") b = store(b);
       if(choice == "2") b = crafting(b);
-      if(choice == "3") calendar(b.date);
+      if(choice == "3") calendar(b);
       if(choice == "4") b.date++;
   
       if (b.transactions == 10){
